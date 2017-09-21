@@ -1,0 +1,31 @@
+{
+  "name": "thinkjs",
+  "version": "1.0.0",
+  "description": "thinking in js",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salody/thinkingInJavaScript.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "salody",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salody/thinkingInJavaScript/issues"
+  },
+  "homepage": "https://github.com/salody/thinkingInJavaScript#readme"
+}
