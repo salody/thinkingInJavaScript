@@ -8,12 +8,23 @@ Javascript中的所有的节点类型都继承自Node类型，因此所有的节
 
 最常用的node类型(括号中数字代表nodeType的值)
 
-* DOCUMENT_NODE(9)         （e.g:   window.document）
-* ELEMENT_NODE(1)                (<body> <a> <p> <script> <html> <h1>...)
-* ATTRIBUTE_NODE(2)         (class="funEdges")
-* TEXT_NODE(3)            (lorem………...)
-* DOCEMENT_FRAGMENT_NODE (11)       (document.createDocumentFragment())
-* DOCUMENT_TYPE_NODE (10)              (<!DOCTYPE html>)
+* DOCUMENT_NODE(9)         
+  （  e.g:   window.document）
+
+* ELEMENT_NODE(1)                
+  (<body> <a> <p> <script> <html> <h1>...)
+
+* ATTRIBUTE_NODE(2)         
+  (class="funEdges")
+
+* TEXT_NODE(3)            
+  (lorem………...)
+
+* DOCEMENT_FRAGMENT_NODE (11)       
+  (document.createDocumentFragment())
+
+* DOCUMENT_TYPE_NODE (10)              
+  (<!DOCTYPE html>)
 
 ### 浏览器中常用node接口（objects或者constructor函数）的继承模型
 
@@ -75,47 +86,10 @@ HTML element Methods:
 
 - insertAdjacentHTML()
 
-### 判断一个node对象的type和name
+## 代码目录结构
 
-```javascript
-console.log(
-	document.doctype.nodeName, //logs 'html' also try document.doctype to get <!DOCTYPE html>
-	document.doctype.nodeType //logs 10 which maps to DOCUMENT_TYPE_NODE
-);
+### Charpter1
 
-//This is DOCUMENT_NODE or nodeType 9 because Node.DOCUMENT_NODE === 9
-console.log(
-	document.nodeName, //logs '#document'
-	document.nodeType //logs 9 which maps to DOCUMENT_NODE
-);
-
-//This is DOCUMENT_FRAGMENT_NODE or nodeType 11 because Node.DOCUMENT_FRAGMENT_NODE === 11
-console.log(
-	document.createDocumentFragment().nodeName, //logs '#document-fragment'
-	document.createDocumentFragment().nodeType //logs 11 which maps to DOCUMENT_FRAGMENT_NODE
-);
-
-//This is ELEMENT_NODE or nodeType 1 because Node. ELEMENT_NODE === 1
-console.log(
-	document.querySelector('a').nodeName, //logs 'A'
-	document.querySelector('a').nodeType //logs 1 which maps to ELEMENT_NODE
-);
-
-//This is TEXT_NODE or nodeType 3 because Node.TEXT_NODE === 3
-console.log(
-	document.querySelector('a').firstChild.nodeName, //logs '#text'
-	document.querySelector('a').firstChild.nodeType //logs 3 which maps to TEXT_NODE
-);
-```
-
-### 获取node value
-
-对于大多数节点类型来说，他的nodeValue值都是null。（除了Text和Comment）
-
-### 创建元素和文本节点
-
-* createElement()
-* createTextNode()
-
+[创建元素和文本节点](./Charpter01/demo01)
 
 
