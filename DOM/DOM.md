@@ -9,22 +9,28 @@ Javascript中的所有的节点类型都继承自Node类型，因此所有的节
 最常用的node类型(括号中数字代表nodeType的值)
 
 * DOCUMENT_NODE(9)         
-  （  e.g:   window.document）
+  ```
+  window.document
+  ```
 
 * ELEMENT_NODE(1)                
-  (<body> <a> <p> <script> <html> <h1>...)
+  ```
+  <body> <a> <p> <script> <html> <h1>
+  ```
 
 * ATTRIBUTE_NODE(2)         
-  (class="funEdges")
+  class="funEdges"
 
 * TEXT_NODE(3)            
-  (lorem………...)
+  lorem...
 
 * DOCEMENT_FRAGMENT_NODE (11)       
   (document.createDocumentFragment())
 
-* DOCUMENT_TYPE_NODE (10)              
-  (<!DOCTYPE html>)
+* DOCUMENT_TYPE_NODE (10)
+  ```
+    <!DOCTYPE html>
+  ```              
 
 ### 浏览器中常用node接口（objects或者constructor函数）的继承模型
 
@@ -90,6 +96,6 @@ HTML element Methods:
 
 ### Charpter1
 
-[创建元素和文本节点](./Charpter01/demo01)
+[创建元素和文本节点](./Charpter01/demo01.html)
 
 
