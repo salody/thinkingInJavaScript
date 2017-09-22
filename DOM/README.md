@@ -29,8 +29,8 @@ Javascript中的所有的节点类型都继承自Node类型，因此所有的节
 
 * DOCUMENT_TYPE_NODE (10)
   ```
-    <!DOCTYPE html>
-  ```              
+  <!DOCTYPE html>
+  ```
 
 ### 浏览器中常用node接口（objects或者constructor函数）的继承模型
 
@@ -92,10 +92,55 @@ HTML element Methods:
 
 - insertAdjacentHTML()
 
+## Document Node
+```
+  console.log(window.document.constructor); //logs function HTMLDocument() { [native code] }
+  console.log(window.document.nodeType); //logs 9, which is a numeric key mapping to DOCUMENT_NODE
+  
+```
+
+## Element Node
+
+- *createElement()*
+- *tagName*
+- *children*
+- *getAttribute()*
+- *setAttribute()*
+- *hasAttribute()*
+- *removeAttribute()*
+- *classList()*
+- *dataset*
+- *attributes*
+
+## Element Node Select
+
+一些预先设定好的选择器。
+
+You should be aware that there are some legacy, pre-configured arrays-like-lists, containing element nodes from an HTML document. Below I list a couple of these (not the complete list) that might be handy to be aware of.
+
+- *document.all* - all elements in HTML document
+- *document.forms* - all *<form>* elements in HTML document
+- *document.images* - all *<img>* elements in HTML document
+- *document.links* - all *<a>* elements in HTML document
+- *document.scripts* - all *<script>* elements in HTML document
+- *document.styleSheets* - all *<link>* or *<style>* objects in HTML document
+
+## 元素节点的尺寸、位置，以及滚动位置
+
+
+
 ## 代码目录结构
 
-### Charpter1
+### Charpter1 Node Overview
 
 [创建元素和文本节点](./Charpter01/demo01.html)
+[向DOM中添加节点](./Charpter01/demo02.html)
+[删除替换](./Charpter01/demo03.html)
+[克隆节点](./Charpter01/demo04.html)
+[确定节点在DOM树中的位置](./Charpter01/demo05.html)
+[判断两个节点是否一样](./Charpter01/demo06.html)
 
+### Charpter2 Document Node
+
+[判断浏览器的DOM level](./Charpter02/demo01.html)
 

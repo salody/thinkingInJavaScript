@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>判断两个节点是否一样</title>
+</head>
+<body>
+<input type="text">
+<input type="text">
+
+
+
+<textarea class="d">foo</textarea>
+<textarea class="d">bar</textarea>
+
+<textarea class="d" ng-data="aaa">foo</textarea>
+<textarea class="d" ng-data="bbb">foo</textarea>
+<script>
+    const input = document.body.querySelectorAll('input');
+    const textarea = document.body.querySelectorAll('textarea');
+
+    console.log(input[0].isEqualNode(input[1]));
+    console.log(textarea[0].isEqualNode(textarea[1]));
+    console.log(textarea[2].isEqualNode(textarea[3]));
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>确定节点在DOM树中的位置</title>
+</head>
+<body>
+<h2>Node.contains</h2>
+<div>
+  <p>The Node.contains() method returns a Boolean value indicating whether a node is a descendant of a given node or not.</p>
+</div>
+<h2>Node.compareDocumentPosition</h2>
+<p>后面的相对于前面的位置</p>
+<p>The Node.compareDocumentPosition() method compares the position of the current node against another node in any other document.</p>
+<p>The return value is a bitmask with the following values:</p>
+<table> <thead> <tr> <th scope="col">number code info</th> <th scope="col">return value</th> </tr> </thead> <tbody> <tr> <td><code>DOCUMENT_POSITION_DISCONNECTED</code></td> <td>1</td> </tr> <tr> <td><code>DOCUMENT_POSITION_PRECEDING</code></td> <td>2</td> </tr> <tr> <td><code>DOCUMENT_POSITION_FOLLOWING</code></td> <td>4</td> </tr> <tr> <td><code>DOCUMENT_POSITION_CONTAINS</code></td> <td>8</td> </tr> <tr> <td><code>DOCUMENT_POSITION_CONTAINED_BY</code></td> <td>16</td> </tr> <tr> <td><code>DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC</code></td> <td>32</td> </tr> </tbody> </table>
+<p>compareDocumentPosition() can be rather confusing because its possible for a node to have more than one type of relationship with another node. For example when a node both contains (16) and precedes (4) the returned value from compareDocumentPosition() will be 20.</p>
+<script type="text/javascript">
+    var head = document.getElementsByTagName('p').item(0);
+    console.log(head.compareDocumentPosition(document.body.getElementsByTagName('div')[0]));
+</script>
+</body>
+</html>

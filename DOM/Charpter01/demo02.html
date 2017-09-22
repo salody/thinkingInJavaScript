@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>添加元素</title>
+</head>
+<body>
+<p>Hi</p>
+<ul>
+  <li>2</li>
+  <li>3</li>
+</ul>
+<script type="text/javascript">
+    let elementNode = document.createElement('strong');
+    let textNode = document.createTextNode(' Dude');
+
+    //append these nodes to the DOM
+    document.querySelector('p').appendChild(elementNode);
+    document.querySelector('strong').appendChild(textNode);
+
+    let text = document.createTextNode('1');
+    let li = document.createElement('li');
+    li.appendChild(text);
+
+    let ul = document.querySelector('ul');
+    ul.insertBefore(li, ul.firstChild);
+
+</script>
+</body>
+</html>

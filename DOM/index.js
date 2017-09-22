@@ -19,3 +19,5 @@ Object.defineProperties(book, {
 });
 
 
+log
+
