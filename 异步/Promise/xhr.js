@@ -1,3 +1,5 @@
+const isPromise = require('./isPromise');
+
 function get(url) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
