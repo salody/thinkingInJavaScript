@@ -29,3 +29,7 @@
   使用yield* 表达式代理generator
   
   实现数组扁平化
+  
+* demo08
+
+  catch error in generator
