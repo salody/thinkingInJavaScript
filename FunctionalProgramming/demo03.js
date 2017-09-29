@@ -1,5 +1,6 @@
 /**
- * 功能描述: map、filter、every、reduce
+ * npm install functional-javascript-workshop 自己体会
+ * 功能描述: map、filter、every、some、reduce
  * @author: liuguanbang
  * 2017/9/29
  */
