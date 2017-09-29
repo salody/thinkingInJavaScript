@@ -15,4 +15,7 @@ function* gen() {
 const g = gen();
 const result = g.next();
 
-console.log(Promise.prototype.isPrototypeOf(result.value));
+result.value
+  .then((response) => response.json())
+  .then(data => g.next(data));
+
