@@ -18,4 +18,14 @@
   
 * demo05
 
-  co模块的使用  
+  co模块的使用
+  
+* demo06
+
+  Generator和for of  
+  
+* demo07
+
+  使用yield* 表达式代理generator
+  
+  实现数组扁平化
