@@ -8,4 +8,8 @@
   
 * demo03
 
-  map   
+  map、some、 every、 reduce   
+  
+* demo04
+
+  recursion 递归   
