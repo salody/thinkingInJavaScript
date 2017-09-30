@@ -57,6 +57,17 @@ function checkUsersValid(originUsers) {
 }
 
 
+function countWords(inputWords) {
+  return inputWords.reduce((outMap, inputWord) => {
+    outMap[inputWord] = ++outMap[inputWord] || 1;
+    return outMap;
+  }, {})
+}
+
+const inputWords = ['Apple', 'Banana', 'Apple', 'Durian', 'Durian', 'Durian']
+console.log(countWords(inputWords));
+
+
 // module.exports = doubleAll;
 // module.exports = getShortMessages;
-module.exports = checkUserValid;
+// module.exports = checkUserValid;
