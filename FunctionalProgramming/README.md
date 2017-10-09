@@ -9,7 +9,7 @@
 ├── demo06.js  partical application 
 ├── demo07.js  判断target对象的某个方法method被调用了多少次.对某个函数进行中间件改造
 ├── demo08.js  block event loop
-├── demo09.js  Trampolines & Tails(递归优化和尾递归)。可以看下面的文章
+├── demo09.js  Trampolines & Tails(递归优化和尾递归)。防止stack over flow。可以看下面的文章
 ├──            https://medium.com/@cukejianya/functional-js-trampolines-tails-88723b4da320
 └── demo08.js  block event loop
 
