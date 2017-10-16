@@ -12,3 +12,7 @@
 node_modules/
 
 npm-debug.log
+.DS_Store
+HTML5/.DS_Store
+异步/.DS_Store
+demo.html
