@@ -5,6 +5,8 @@
  * 2017/9/29
  */
 
+ const assert = require('assert');
+
 function doubleAll(numbers) {
   return numbers.map((number) => number * 2)
 }
@@ -19,27 +21,6 @@ function getShortMessages(messages) {
     .map((item) => item.message);
 }
 
-/**
- * return return return 函数式一定要return。重要的事说三遍
-                      .::::.
-                    .::::::::.
-                   :::::::::::
-                ..:::::::::::'
-             '::::::::::::'
-               .::::::::::
-          '::::::::::::::..
-               ..::::::::::::.
-             ``::::::::::::::::
-              ::::``:::::::::'        .:::.
-             ::::'   ':::::'       .::::::::.
-           .::::'      ::::     .:::::::'::::.
-          .:::'       :::::  .:::::::::' ':::::.
-         .::'        :::::.:::::::::'      ':::::.
-        .::'         ::::::::::::::'         ``::::.
-    ...:::           ::::::::::::'              ``::.
-   ```` ':.          ':::::::::'                  ::::..
-                      '.:::::'                    ':'````..
-*/
 // function checkUsersValid(originUsers) {
 //   return function allUsersValid(submittedUsers) {
 //     return submittedUsers.every((item) => originUsers.map((item) => item.id).indexOf(item.id) !== -1)
@@ -51,9 +32,9 @@ function checkUsersValid(originUsers) {
     return submittedUsers.every((submittedUser) => {
       return originUsers.some((originUser) => {
         return originUser.id === submittedUser.id;
-      })
-    })
-  }
+      });
+    });
+  };
 }
 
 
@@ -61,13 +42,22 @@ function countWords(inputWords) {
   return inputWords.reduce((outMap, inputWord) => {
     outMap[inputWord] = ++outMap[inputWord] || 1;
     return outMap;
-  }, {})
+  }, {});
 }
 
-const inputWords = ['Apple', 'Banana', 'Apple', 'Durian', 'Durian', 'Durian']
-console.log(countWords(inputWords));
 
-
-// module.exports = doubleAll;
-// module.exports = getShortMessages;
-// module.exports = checkUserValid;
+// funfunfunction
+let animals = [
+  { name: 'Fjsn', species: 'rabbit'},
+  { name: 'Caro', species: 'dog'},
+  { name: 'Haba', species: 'fish'},
+  { name: 'Telo', species: 'dog'},
+  { name: 'Candy', species: 'cat'},
+];
+describe('using array method', () => {
+  it('using map', () => {
+    let names = animals.map((animal) => animal.name);
+    assert(names instanceof Array);
+    assert(names.length === 5);
+  });
+});

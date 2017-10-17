@@ -12,6 +12,10 @@
 ├── demo09.js  Trampolines & Tails(递归优化和尾递归)。防止stack over flow。可以看下面的文章
 ├──            https://medium.com/@cukejianya/functional-js-trampolines-tails-88723b4da320
 ├── demo10.js  递归
-└── demo08.js  block event loop
+├── demo11.js  curring
+└── demo12.js  reduce的高阶用法
 
 ```
+### 核心概念
+
+* 在函数式编程中。function就是value。

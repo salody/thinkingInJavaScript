@@ -10,7 +10,7 @@ const assert = require('assert');
 function getAnimals(fetch, id) {
   return fetch('http://api.anilamfarmgame.com/animals/' + id)
     .then(response => response.json())
-    .then(data => data.result[0]);
+    .then(data => data.result[0])
 }
 
 /* {

@@ -6,6 +6,8 @@
  * 2017/9/29
  */
 
+const assert = require('assert');
+
 // 重复执行函数fn多次
 // function repeat(fn, num) {
 //   for (let i = 0; i < num; i ++) {
@@ -20,4 +22,21 @@ function repeat(fn, num) {
   fn();
   return repeat(fn, --num);
 }
-module.exports = repeat;
+
+let animals = [
+  { name: 'Fjsn', species: 'rabbit'},
+  { name: 'Caro', species: 'dog'},
+  { name: 'Haba', species: 'fish'},
+  { name: 'Telo', species: 'dog'},
+  { name: 'Candy', species: 'cat'},
+];
+
+const isDog = (animal) => animal.species === 'dog';
+let dogs = animals.filter(isDog);
+
+
+describe("array filter will work", () => {
+  it("we have two dogs", () => {
+    assert(dogs.length === 2);
+  });
+});

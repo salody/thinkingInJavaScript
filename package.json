@@ -27,21 +27,5 @@
   "bugs": {
     "url": "https://github.com/salody/thinkingInJavaScript/issues"
   },
-  "homepage": "https://github.com/salody/thinkingInJavaScript#readme",
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "node": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "rules": {
-      "semi": 2
-    }
-  }
+  "homepage": "https://github.com/salody/thinkingInJavaScript#readme"
 }
