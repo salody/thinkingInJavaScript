@@ -1,5 +1,6 @@
 /**
  * 功能描述: 使用DI来make the code testable
+ *  The ability to manage the dependencies effectively 
  * @author: liuguanbang
  * 2017/10/16
  */
@@ -42,5 +43,6 @@ describe('getAnimals', () => {
     };
     getAnimals(fakeFetch, 12345)
       .then(result => assert(result.name === '金毛'));
+
   });
 });
