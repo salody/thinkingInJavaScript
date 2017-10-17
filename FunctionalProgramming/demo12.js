@@ -21,6 +21,36 @@ let data = {
 const fs = require('fs')
 let assert = require('assert')
 
-let output = fs.readdirSync('data.txt')
+const output = fs.readFileSync('data.txt', 'utf8')
+  .trim()
+  .split('\n')
+  .map(line => line.split('\u0020\u0020'))
+  .reduce((customers, line) => {
+    /* if (customers[line[0]]) {
+      customers[line[0]].push({
+        name: line[1],
+        price: line[2],
+        quantity: line[3]
+      })
+    } else {
+      customers[line[0]] = [{
+        name: line[1],
+        price: line[2],
+        quantity: line[3]
+      }]
+    } */
+    customers[line[0]] = customers[line[0]] || [];
+    customers[line[0]].push({
+      name: line[1],
+      price: line[2],
+      quantity: line[3]
+    });
+    return customers;
+  }, {});
 
-output = 2
+
+
+console.log('====================================');
+console.log(output);
+console.log('====================================');
+

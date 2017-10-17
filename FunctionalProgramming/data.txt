@@ -1,6 +1,6 @@
-Jack Json waffle iron 80 2
-Jack Json blender 200 1
-Jack Json knife 10 4
-Mike Smith waffle iron 80 1
-Mike Smith blender 20 3
-Mike Smith pot 10 1
+Jack Json  waffle iron  80  2
+Jack Json  blender  200  1
+Jack Json  knife  10  4
+Mike Smith  waffle iron  80  1
+Mike Smith  blender  20  3
+Mike Smith  pot  10  1
