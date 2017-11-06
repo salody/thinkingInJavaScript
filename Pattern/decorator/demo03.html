@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>数据上报统计</title>
+</head>
+<body>
+  <p>页面有一个登录button，点击这个Button会弹出登录浮层，与此同时要进行数据上报，来统计有多少用户点击了这个登录button</p>
+  <button tag='login' id="button">点击打开登录浮层</button>
+  <script>
+
+    Function.prototype.after = function (afterfn) {
+      let _self = this;
+      return function() {
+        let ret = _self.apply(this, arguments);
+        afterfn.apply(this, arguments);
+        return ret;
+      }
+    }
+
+    let showLogin =  function () {
+      console.log('打开登录界面');
+      //log(this.getAttribute('tag'));
+    }
+    let log = function () {
+      console.log('上报的标签是' + this.getAttribute('tag'));
+      // (new)Image.src = 'http://...'
+    }
+
+    let anotherLog = function () {
+      console.log('log之后我们再干点事情')
+      console.log(this); //this还是button这个DOM节点
+    }
+
+    showLogin = showLogin.after(log).after(anotherLog);
+    document.getElementById('button').onclick = showLogin;
+  
+  </script>
+</body>
+</html>

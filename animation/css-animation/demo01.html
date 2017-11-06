@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Intro to the CSS Animation</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      padding: 50px;
+    }
+
+    #container {
+      padding: 20px;
+      height: 250px;
+      line-height: 250px;
+      background-color: #eee;
+      text-align: center;
+    }
+
+    #hexagon {
+      /* vertical-align: middle; */
+      animation: bobble 2s infinite;
+    }
+
+    @keyframes bobble {
+      0% {
+        transform: translate3d(50px, 40px, 0px);
+        animation-timing-function: ease-in;
+      }
+      50% {
+        transform: translate3d(50px, 50px, 0px);
+        animation-timing-function: ease-out;
+      }
+      100% {
+        transform: translate3d(50px, 40px, 0px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <img id="hexagon" src="https://www.kirupa.com/images/hexagon.svg" alt="">
+  </div>
+  <p>When you declare timing functions on individual keyframes, it overrides any timing functions you may have set in the broader animation declaration. That is a good thing to know if you want to mix and match timing functions and have them live in different places. </p>
+</body>
+
+</html>

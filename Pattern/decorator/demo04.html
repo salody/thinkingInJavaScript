@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>使用AOP改变函数的参数</title>
+</head>
+
+<body>
+  <script>
+    'use strict'
+    Function.prototype.before = function(beforefn) {
+      let _self = this;
+      return function () {
+        beforefn.apply(this, arguments);
+        return _self.apply(this, arguments);
+      }
+    }
+    // 原函数 
+    let func = function (params) {
+      // console.log(params)
+      // console.log(arguments);
+    }
+
+    // 原函数传入的参数为
+    // {
+    //   a: '1'
+    //   b: '2'
+    // }
+    // 现在要在原函数的参数中加入参数c:'3'
+    
+    // 开始构造
+    func = func.before(function (params) {
+      console.log(arguments);
+      setTimeout(() => {
+        params.c = '3'
+      console.log(arguments);
+      }, 5000);
+    })
+    func({
+      a: '1',
+      b: '2'
+    })
+   /*  function test() {
+      //console.log(arguments);
+      arguments[0] = 1
+      console.log(arguments);
+    }
+
+    test({a:'1', b: '2'}) */
+  </script>
+</body>
+
+</html>

@@ -14,11 +14,35 @@
   </div>
   <script>
     Function.prototype.before = function (beforefn) {
-      console.log(this);
+      // 这里的this是调用before的函数
+      // 在这个例子里是getElementById这个函数
+      const _self = this;
+      return function () {
+        // 这里的this是document
+
+        // 执行新函数，保证this不会被劫持
+        beforefn.apply(this, arguments);
+
+        // 执行原函数，并返回原函数的执行结果，保证this不被劫持
+        return _self.apply(this, arguments);
+      }
     }
-   
+
+    Function.prototype.after = function (afterfn) {
+      const _self = this;
+      return function () {
+        let origin = _self.apply(this, arguments);
+        afterfn.apply(this, arguments);
+        return origin;
+      }
+    }
+
     document.getElementById = document.getElementById.before(function (id) {
       console.log(id);
+    })
+
+    document.getElementById = document.getElementById.after(function (params) {
+      
     })
 
     const div = document.getElementById('demo')

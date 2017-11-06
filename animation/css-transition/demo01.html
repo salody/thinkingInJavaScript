@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Intro to the CSS Transition</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      padding: 50px;
+    }
+    #container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 290px;
+      background-color: #eee; 
+    }
+
+    #hexagon:hover {
+      transform: scale3d(1.2, 1.2, 1) rotate(45deg);
+    }
+
+    #hexagon {
+      transition: transform .5s;
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img id="hexagon" src="https://www.kirupa.com/images/hexagon.svg" alt="">
+  </div>
+</body>
+</html>
