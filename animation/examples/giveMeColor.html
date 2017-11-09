@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Give me Color</title>
+  <style>
+    #container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 75%;
+      height: 290px;
+      background-color: #ffff00;
+      margin: 0 auto;
+      box-shadow: 0px 0px 15px #ccc;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color .2s ease-out
+    }
+    #content {
+      margin: 0;
+      padding: 0;
+      color: #000000;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <p id="content">#ffff00</p>
+  </div>
+  <script>
+    const container = document.querySelector('#container');
+    const content = document.querySelector('#content');
+    const zeros = "0000000";
+    const changeColor = (e) => {
+      let color = '#' + Math.floor((Math.random() * 0xFFFFFF)).toString(16);
+      var colorLength = color.length;
+      if (colorLength < 7) {
+        color += zeros.substring(0, zeros.length - colorLength);
+      }
+      container.style.backgroundColor = color;
+      content.innerHTML = color;
+    }
+    container.addEventListener('click', changeColor, false);
+  </script>
+</body>
+
+</html>

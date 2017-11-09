@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fade And Scale</title>
+  <style>
+    #container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      background-color: #82C1FF;
+      width: 500px;
+      height: 300px;
+      border-radius: 10px;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-shadow: 3px 3px 3px #333;
+
+      animation-name: fade-and-scale;
+      animation-duration: 1.5s;
+      animation-timing-function: cubic-bezier(.44,1.93,1,1.15);
+    }
+
+  
+
+    @keyframes fade-and-scale {
+      from {
+        transform: scale(.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>hi, everybody!</p>
+  </div>
+</body>
+
+</html>
