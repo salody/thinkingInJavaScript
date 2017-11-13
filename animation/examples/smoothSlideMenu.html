@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Smooth Slide Menu</title>
+  <style>
+    body {
+      background-color: #EEE;
+      font-family: Helvetica, Arial, sans-serif;
+      padding: 25px;
+      margin: 0;
+    }
+
+    #roundBtn {
+      width: 50px;
+      height: 50px;
+      border: 10px solid #96D9FF;
+      background-color: #0065a6;
+      border-radius: 50%;
+      outline: none;
+      transition: all .2s cubic-bezier(0, .52, 0, 1);
+    }
+
+    #roundBtn:hover {
+      background-color: #96D9FF;
+      cursor: pointer;
+      border-color: #003557;
+      transform: scale(1.2);
+    }
+
+    #roundButton:active {
+      border-color: #003557;
+      background-color: #FFF;
+    }
+
+    #container li {
+      margin-bottom: 10px;
+    }
+
+    #flyoutmenu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #FFE600;
+      transform: translate3d(-100vw, 0, 0);
+      transition: transform .3s cubic-bezier(0, .52, 0, 1);
+      overflow: scroll;
+      z-index: 1000;
+    }
+
+    #flyoutmenu.show {
+      transform: translate3d(0, 0, 0);
+    }
+  </style>
+</head>
+
+<body>
+  <button id="roundBtn"></button>
+  <div id="container">
+    <p>Can you spot the item that doesn't belong?</p>
+    <ul>
+      <li>Lorem</li>
+      <li>Ipsum</li>
+      <li>Dolor</li>
+      <li>Sit</li>
+      <li>Bumblebees</li>
+      <li>Aenean</li>
+      <li>Consectetur</li>
+    </ul>
+  </div>
+  <div id="flyoutmenu">
+    <h2>
+      <a href="#">Home</a>
+    </h2>
+    <h2>
+      <a href="#">About</a>
+    </h2>
+    <h2>
+      <a href="#">Contact</a>
+    </h2>
+    <h2>
+      <a href="#">Search</a>
+    </h2>
+  </div>
+  <script>
+    const btn = document.querySelector('#roundBtn');
+    const menu = document.querySelector('#flyoutmenu');
+    btn.addEventListener('click', function (e) {
+      menu.classList.add('show');
+    }, false);
+    menu.addEventListener('click', function (e) {
+      menu.classList.remove('show');
+      e.stopPropagation();
+    })
+  </script>
+</body>
+
+</html>

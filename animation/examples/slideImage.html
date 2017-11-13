@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slide Image on hover</title>
+  <style>
+    body {
+      text-align: center
+    }
+    #img-container {
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      border: 1px solid #ccc;
+    }
+    #img-container img{
+      transition: all .1s linear;
+    }
+    #img-container img:hover {
+      transform: translate3d(0, -150px, 0)
+    }
+  </style>
+</head>
+<body>
+  <h2>Slide Image On Hover</h2>
+  <div id="img-container">
+    <img src="meh.png" alt="" width="150" height="300">
+  </div>
+</body>
+</html>
